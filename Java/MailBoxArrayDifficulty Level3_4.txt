@@ -1,0 +1,51 @@
+Concept - Array Difficulty Level 3
+
+Create a class MailBox with below attributes:
+
+int - id
+
+String - name
+
+String - creationDate
+
+Make all the attributes private.Create corresponding getters and setters.
+
+Create a constructor which takes all parameters in the above sequence. The constructor should set the value of attributes to parameter values inside the constructor.
+
+Create a class MailBoxDemo with main method
+
+Create a static method getEvenPositionMailBox in the MailBoxDemo class.This method will take array of MailBox objects. This method returns an array with all elements in even position.
+
+Create an array of 5 MailBox objects in the main method
+Refer below sample main method and test the output:
+
+Call the above static method from the main method
+
+
+public class MailBoxDemo {
+public static void main(String args[]){
+MailBox mailbox1= new MailBox(7,"vjcmlwe","szfolwb");
+MailBox mailbox2= new MailBox(67,"imcftaw","jlnzywo");
+MailBox mailbox3= new MailBox(26,"lsckexs","lyqonys");
+MailBox mailbox4= new MailBox(5,"cbajxhj","rgwyxze");
+MailBox mailbox5= new MailBox(4,"bxifplc","wevsaco");
+
+
+MailBox[] objArray= {mailbox1,mailbox2,mailbox3,mailbox4,mailbox5};
+
+MailBox[] objResultArray1= getEvenPositionMailBox(objArray);
+if(objResultArray1==null){
+System.out.println("Output after first operation is null. ");
+}else{
+System.out.println("Displaying contents of result array: ");
+
+for(MailBox mailbox:objResultArray1){
+System.out.println(mailbox.getId()+" " + mailbox.getName()+" " + mailbox.getCreationDate()+" ");
+}
+}
+}}
+Output
+Displaying contents of result array: 
+7 vjcmlwe szfolwb 
+26 lsckexs lyqonys 
+4 bxifplc wevsaco 
